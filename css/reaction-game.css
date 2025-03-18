@@ -1,0 +1,162 @@
+/* Reaction Game Styles */
+.reaction-game-container {
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.reaction-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 15px 20px;
+    background-color: #f8fafc;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+}
+
+.reaction-stats {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.reaction-stat {
+    padding: 8px 15px;
+    border-radius: var(--radius-sm);
+    background-color: white;
+    box-shadow: var(--shadow-sm);
+    margin: 0 5px;
+    transition: all 0.3s ease;
+}
+
+.reaction-stat i {
+    margin-right: 5px;
+    color: var(--red);
+}
+
+.reaction-stat .current-time {
+    color: var(--blue);
+    font-weight: 600;
+}
+
+.reaction-stat .best-time {
+    color: var(--green);
+    font-weight: 600;
+}
+
+.reaction-stat .average-time {
+    color: var(--purple);
+    font-weight: 600;
+}
+
+.reaction-area {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 0;
+}
+
+.reaction-target {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    background-color: #f43f5e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: var(--shadow-lg);
+    transition: background-color 0.1s ease, transform 0.3s ease;
+    user-select: none;
+}
+
+.reaction-target:hover {
+    transform: scale(1.02);
+}
+
+.reaction-target:active {
+    transform: scale(0.98);
+}
+
+.reaction-target.waiting {
+    background-color: #f97316;
+}
+
+.reaction-target.active {
+    background-color: #22c55e;
+    animation: pulse 0.5s infinite alternate;
+}
+
+.reaction-target.success {
+    background-color: #3b82f6;
+}
+
+.reaction-target.fail {
+    background-color: #ef4444;
+    animation: shake 0.5s ease;
+}
+
+.reaction-target.slow {
+    background-color: #9ca3af;
+}
+
+.reaction-message {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+    max-width: 80%;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.reaction-instructions {
+    margin-top: 20px;
+    text-align: center;
+    color: var(--text-secondary);
+    font-size: 1rem;
+    line-height: 1.6;
+    max-width: 600px;
+    padding: 15px;
+    background-color: #f8fafc;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+}
+
+.finalize-button {
+    margin-top: 20px;
+    padding: 12px 24px;
+    background: linear-gradient(to right, var(--blue), var(--purple));
+    color: white;
+    border: none;
+    border-radius: var(--radius-md);
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: var(--shadow-md);
+    transition: all 0.3s ease;
+}
+
+.finalize-button:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+}
+
+/* Animations */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.05); }
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    20%, 60% { transform: translateX(-10px); }
+    40%, 80% { transform: translateX(10px); }
+}

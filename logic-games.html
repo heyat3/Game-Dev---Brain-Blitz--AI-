@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logic Challenges - Brain Blitz</title>
+    <!-- Main styles -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Logic Games specific styles -->
+    <link rel="stylesheet" href="css/logic-games.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <h1>Logic Challenges</h1>
+            <p class="subtitle">
+                Test your logical reasoning with these five brain-teasing puzzle games designed to 
+                challenge your problem-solving skills.
+            </p>
+        </header>
+
+        <!-- Back to Home Button -->
+        <a href="index.html" class="back-home-button">
+            <i class="fas fa-arrow-left"></i>
+            <span>Back to Home</span>
+        </a>
+
+        <!-- Description Area - MOVED ABOVE GAMES GRID -->
+        <div class="description-area">
+            <div class="description-card pattern-description">
+                <h3>Pattern Finder</h3>
+                <p>Identify the logical pattern in a sequence of symbols, numbers, or shapes and select the correct option to complete it.</p>
+                <ul>
+                    <li>Each level presents a new sequence following a logical rule</li>
+                    <li>Analyze the pattern to determine what comes next</li>
+                    <li>Difficulty increases with more complex patterns</li>
+                    <li>Perfect for developing pattern recognition skills</li>
+                </ul>
+                <div class="sample-game">
+                    <div class="pattern-example">
+                        <span>2</span>
+                        <span>4</span>
+                        <span>8</span>
+                        <span>16</span>
+                        <span>?</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="description-card grid-description hidden">
+                <h3>Grid Puzzle</h3>
+                <p>A Lights Out-style puzzle where clicking a tile changes its state and the state of adjacent tiles.</p>
+                <ul>
+                    <li>Turn all lights on (or off) to win</li>
+                    <li>Plan your moves carefully - each click affects multiple tiles</li>
+                    <li>Difficulty increases with larger grids and different patterns</li>
+                    <li>Challenges spatial reasoning and strategic thinking</li>
+                </ul>
+                <div class="sample-game">
+                    <div class="grid-example">
+                        <div class="grid-row">
+                            <div class="grid-cell on"></div>
+                            <div class="grid-cell off"></div>
+                            <div class="grid-cell on"></div>
+                        </div>
+                        <div class="grid-row">
+                            <div class="grid-cell off"></div>
+                            <div class="grid-cell on"></div>
+                            <div class="grid-cell off"></div>
+                        </div>
+                        <div class="grid-row">
+                            <div class="grid-cell on"></div>
+                            <div class="grid-cell off"></div>
+                            <div class="grid-cell on"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="description-card logic-description hidden">
+                <h3>Logic Gates Challenge</h3>
+                <p>Arrange logic gates (AND, OR, NOT, etc.) to achieve specified outputs from given inputs.</p>
+                <ul>
+                    <li>Drag and connect logic gates to create circuits</li>
+                    <li>Learn the basics of computational thinking</li>
+                    <li>Test your solutions against multiple input combinations</li>
+                    <li>Perfect introduction to digital logic principles</li>
+                </ul>
+                <div class="sample-game">
+                    <div class="logic-example">
+                        <div class="gate and-gate">AND</div>
+                        <div class="gate or-gate">OR</div>
+                        <div class="gate not-gate">NOT</div>
+                        <div class="gate xor-gate">XOR</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="description-card path-description hidden">
+                <h3>Path Finder</h3>
+                <p>Navigate from start to finish following specific movement rules and avoiding obstacles.</p>
+                <ul>
+                    <li>Move according to special rules (e.g., prime number steps)</li>
+                    <li>Avoid traps and obstacles along the way</li>
+                    <li>Find the optimal route to maximize your score</li>
+                    <li>Tests planning and algorithmic thinking</li>
+                </ul>
+                <div class="sample-game">
+                    <div class="path-example">
+                        <div class="path-grid">
+                            <div class="path-cell start">S</div>
+                            <div class="path-cell"></div>
+                            <div class="path-cell"></div>
+                            <div class="path-cell obstacle"></div>
+                            <div class="path-cell"></div>
+                            <div class="path-cell"></div>
+                            <div class="path-cell obstacle"></div>
+                            <div class="path-cell"></div>
+                            <div class="path-cell end">E</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="description-card code-description hidden">
+                <h3>Code Breaker</h3>
+                <p>A Mastermind-style game where you guess a hidden sequence based on feedback after each attempt.</p>
+                <ul>
+                    <li>Deduce the hidden code through logical elimination</li>
+                    <li>Receive feedback on correct colors and positions</li>
+                    <li>Solve the puzzle in as few guesses as possible</li>
+                    <li>Sharpens deductive reasoning skills</li>
+                </ul>
+                <div class="sample-game">
+                    <div class="code-example">
+                        <div class="code-row">
+                            <div class="code-peg red"></div>
+                            <div class="code-peg blue"></div>
+                            <div class="code-peg green"></div>
+                            <div class="code-peg yellow"></div>
+                            <div class="code-feedback">
+                                <span class="correct-position">2</span>
+                                <span class="correct-color">1</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Logic Games Grid -->
+        <div class="games-grid">
+            <button class="game-button teal" data-game="pattern">
+                <div class="game-content">
+                    <div class="icon"><i class="fas fa-puzzle-piece"></i></div>
+                    <h2>Pattern Finder</h2>
+                    <p>Complete sequences by identifying the logical pattern.</p>
+                </div>
+            </button>
+            
+            <button class="game-button orange" data-game="grid">
+                <div class="game-content">
+                    <div class="icon"><i class="fas fa-th"></i></div>
+                    <h2>Grid Puzzle</h2>
+                    <p>Toggle tiles to solve the lights-out style puzzle.</p>
+                </div>
+            </button>
+            
+            <button class="game-button indigo" data-game="logic">
+                <div class="game-content">
+                    <div class="icon"><i class="fas fa-microchip"></i></div>
+                    <h2>Logic Gates</h2>
+                    <p>Arrange logic gates to achieve the target output.</p>
+                </div>
+            </button>
+            
+            <button class="game-button cyan" data-game="path">
+                <div class="game-content">
+                    <div class="icon"><i class="fas fa-route"></i></div>
+                    <h2>Path Finder</h2>
+                    <p>Navigate through the maze using logical movement rules.</p>
+                </div>
+            </button>
+            
+            <button class="game-button amber" data-game="code">
+                <div class="game-content">
+                    <div class="icon"><i class="fas fa-key"></i></div>
+                    <h2>Code Breaker</h2>
+                    <p>Crack the secret code using logical deduction.</p>
+                </div>
+            </button>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <p>These logic challenges are designed to improve critical thinking and problem-solving skills.</p>
+            <p>Challenge yourself daily to enhance your cognitive abilities!</p>
+        </footer>
+    </div>
+
+    <!-- Game Containers (Initially Hidden) -->
+    <div id="game-container" class="hidden">
+        <div class="game-header">
+            <button id="back-button"><i class="fas fa-arrow-left"></i> Back to Menu</button>
+            <h2 id="current-game-title">Game Title</h2>
+            <div id="game-timer">Time: <span>0</span></div>
+        </div>
+        <div id="game-area"></div>
+        <div id="game-score" class="hidden">
+            <h3>Your Score: <span id="score-value">0</span></h3>
+            <button id="play-again">Play Again</button>
+        </div>
+    </div>
+
+    <!-- Logic Games script -->
+    <script src="js/logic-games.js" defer></script>
+    <script src="js/pattern-finder.js" defer></script>
+</body>
+</html>

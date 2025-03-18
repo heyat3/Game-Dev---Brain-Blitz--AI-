@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brain Blitz</title>
+    <!-- Main styles -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Game-specific styles -->
+    <link rel="stylesheet" href="css/typing-game.css">
+    <link rel="stylesheet" href="css/memory-game.css">
+    <link rel="stylesheet" href="css/reaction-game.css">
+    <link rel="stylesheet" href="css/sequence-game.css">
+    <link rel="stylesheet" href="css/math-game.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <h1>Brain Blitz</h1>
+            <p class="subtitle">
+                Challenge your cognitive abilities with six fun minigames designed to test memory, 
+                reaction time, accuracy, and problem-solving skills.
+            </p>
+        </header>
+
+        <!-- Description Area -->
+        <div class="description-area">
+            <!-- Initial Prompt - Will be replaced by game descriptions -->
+            <div class="description-prompt">
+                <div class="prompt-icon"><i class="fas fa-hand-point-down"></i></div>
+                <h3>Select a Game</h3>
+                <p>Click on any game below to view its description and play.</p>
+            </div>
+            
+            <!-- Typing Game Description -->
+            <div class="description-card typing-description hidden">
+                <h3>Typing Challenge</h3>
+                <p>Test your typing speed and accuracy with this engaging typing game.</p>
+                <ul>
+                    <li>Type words and phrases against the clock</li>
+                    <li>Track your words per minute (WPM) and accuracy</li>
+                    <li>Three difficulty modes: Easy, Hard, and Endless</li>
+                    <li>Perfect for improving keyboard skills and finger memory</li>
+                </ul>
+                <div class="sample-game">
+                    <div class="typing-preview">
+                        <div class="text-sample">
+                            <span class="correct">The</span> 
+                            <span class="current">quick</span> 
+                            <span class="pending">brown fox jumps over the lazy dog.</span>
+                        </div>
+                        <div class="stats-preview">
+                            <div class="stat">Speed: <span>45 WPM</span></div>
+                            <div class="stat">Accuracy: <span>98%</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Memory Game Description -->
+            <div class="description-card memory-description hidden">
+                <h3>Memory Match</h3>
+                <p>Test and improve your memory by finding matching pairs of cards.</p>
+                <ul>
+                    <li>Remember the positions of cards as you flip them</li>
+                    <li>Match all pairs in the fewest moves possible</li>
+                    <li>Multiple difficulty levels with more cards and less time</li>
+                    <li>Enhances visual memory and concentration</li>
+                </ul>
+                <div class="sample-game">
+                    <div class="memory-preview">
+                        <div class="memory-card-preview flipped">
+                            <div class="card-front">A</div>
+                        </div>
+                        <div class="memory-card-preview">
+                            <div class="card-back">?</div>
+                        </div>
+                        <div class="memory-card-preview">
+                            <div class="card-back">?</div>
+                        </div>
+                        <div class="memory-card-preview flipped matched">
+                            <div class="card-front">B</div>
+                        </div>
+                        <div class="memory-card-preview flipped matched">
+                            <div class="card-front">B</div>
+                        </div>
+                        <div class="memory-card-preview">
+                            <div class="card-back">?</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Reaction Game Description -->
+            <div class="description-card reaction-description hidden">
+                <h3>Reaction Test</h3>
+                <p>Measure and improve your reaction time to visual stimuli.</p>
+                <ul>
+                    <li>Click as quickly as possible when the target changes color</li>
+                    <li>Track your average reaction time in milliseconds</li>
+                    <li>Compare your best, average, and current times</li>
+                    <li>Great for improving reflexes and focus</li>
+                </ul>
+                <div class="sample-game">
+                    <div class="reaction-preview">
+                        <div class="target-preview active">
+                            <span>CLICK NOW!</span>
+                        </div>
+                        <div class="time-preview">
+                            <span>Average: 268ms</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Sequence Game Description -->
+            <div class="description-card sequence-description hidden">
+                <h3>Number Sequence</h3>
+                <p>Test your pattern recognition by identifying and continuing number sequences.</p>
+                <ul>
+                    <li>Observe a series of numbers and identify the pattern</li>
+                    <li>Enter the next number in the sequence</li>
+                    <li>Progressively harder patterns with each level</li>
+                    <li>Strengthens logical thinking and mathematical reasoning</li>
+                </ul>
+                <div class="sample-game">
+                    <div class="sequence-preview">
+                        <div class="sequence-display-preview">
+                            <div class="number-sequence">2, 4, 8, 16, ?</div>
+                        </div>
+                        <div class="sequence-input-preview">
+                            <input type="number" placeholder="Enter next number" value="32">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Shapes Game Description -->
+            <div class="description-card shapes-description hidden">
+                <h3>Shape Sorter</h3>
+                <p>Sort shapes by color, size, and type to test visual processing and categorization.</p>
+                <ul>
+                    <li>Drag shapes to their matching categories</li>
+                    <li>Sort by multiple attributes simultaneously</li>
+                    <li>Time-based challenges with increasing complexity</li>
+                    <li>Improves visual discrimination and categorization skills</li>
+                </ul>
+                <div class="sample-game">
+                    <div class="shapes-preview">
+                        <div class="shape circle-preview red-shape"></div>
+                        <div class="shape square-preview blue-shape"></div>
+                        <div class="shape triangle-preview green-shape"></div>
+                        <div class="shape circle-preview yellow-shape"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Math Game Description -->
+            <div class="description-card math-description hidden">
+                <h3>Speed Math</h3>
+                <p>Solve math problems against the clock to test and improve your mental arithmetic.</p>
+                <ul>
+                    <li>Answer addition, subtraction, multiplication, and division problems</li>
+                    <li>Adjustable difficulty levels for all ages</li>
+                    <li>Time pressure increases mental processing speed</li>
+                    <li>Perfect for developing quick mental math skills</li>
+                </ul>
+                <div class="sample-game">
+                    <div class="math-preview">
+                        <div class="problem-preview">8 × 7 = ?</div>
+                        <div class="answer-preview">
+                            <input type="number" placeholder="Enter answer" value="56">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Game Selection Grid -->
+        <div class="games-grid">
+            <button class="game-button blue" data-game="typing">
+                <div class="game-content">
+                    <div class="icon"><i class="fas fa-keyboard"></i></div>
+                    <h2>Typing Challenge</h2>
+                    <p>Test your typing speed and accuracy.</p>
+                </div>
+            </button>
+            
+            <button class="game-button purple" data-game="memory">
+                <div class="game-content">
+                    <div class="icon"><i class="fas fa-lightbulb"></i></div>
+                    <h2>Memory Match</h2>
+                    <p>Remember and match pairs of cards.</p>
+                </div>
+            </button>
+            
+            <button class="game-button red" data-game="reaction">
+                <div class="game-content">
+                    <div class="icon"><i class="fas fa-brain"></i></div>
+                    <h2>Reaction Test</h2>
+                    <p>Test your reaction time to visual stimuli.</p>
+                </div>
+            </button>
+            
+            <button class="game-button yellow" data-game="sequence">
+                <div class="game-content">
+                    <div class="icon"><i class="fas fa-hashtag"></i></div>
+                    <h2>Number Sequence</h2>
+                    <p>Identify and continue number patterns.</p>
+                </div>
+            </button>
+            
+            <button class="game-button green" data-game="shapes">
+                <div class="game-content">
+                    <div class="icon"><i class="fas fa-square"></i></div>
+                    <h2>Shape Sorter</h2>
+                    <p>Sort shapes by color, size, and type.</p>
+                </div>
+            </button>
+            
+            <button class="game-button pink" data-game="math">
+                <div class="game-content">
+                    <div class="icon"><i class="fas fa-calculator"></i></div>
+                    <h2>Speed Math</h2>
+                    <p>Solve math problems against the clock.</p>
+                </div>
+            </button>
+        </div>
+
+        <!-- Random Game Button and Logic Games Button -->
+        <div class="button-container">
+            <button id="random-game" class="random-button">
+                <i class="fas fa-random"></i>
+                <span>Play Random Challenge</span>
+            </button>
+            
+            <a href="logic-games.html" class="logic-button">
+                <i class="fas fa-brain"></i>
+                <span>Logic Challenges</span>
+            </a>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <p>Each game tests different cognitive skills and provides scores based on speed and accuracy.</p>
+            <p>Challenge yourself daily to improve your cognitive abilities!</p>
+        </footer>
+    </div>
+
+    <!-- Game Containers (Initially Hidden) -->
+    <div id="game-container" class="hidden">
+        <div class="game-header">
+            <button id="back-button"><i class="fas fa-arrow-left"></i> Back to Menu</button>
+            <h2 id="current-game-title">Game Title</h2>
+            <div id="game-timer">Time: <span>0</span></div>
+        </div>
+        <div id="game-area"></div>
+        <div id="game-score" class="hidden">
+            <h3>Your Score: <span id="score-value">0</span></h3>
+            <button id="play-again">Play Again</button>
+        </div>
+    </div>
+
+    <!-- Main script must be loaded first but executed after DOM is ready -->
+    <script src="script.js" defer></script>
+    
+    <!-- Game-specific scripts with defer attribute to ensure proper loading -->
+    <script src="js/typing-game.js" defer></script>
+    <script src="js/memory-game.js" defer></script>
+    <script src="js/reaction-game.js" defer></script>
+    <script src="js/sequence-game.js" defer></script>
+    <script src="js/math-game.js" defer></script>
+</body>
+</html>
